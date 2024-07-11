@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { auth, provider } from './config';
 import { signInWithPopup } from 'firebase/auth';
 import Home from '../page/home/Home';
+import './signup.css'
 
 function Signup() {
   const [value, setValue] = useState(null);

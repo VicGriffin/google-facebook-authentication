@@ -21,8 +21,9 @@ function Signup() {
     <div>
         {value?<home/>:
         <button onClick={handleClick}>
-            sign in with Google
-        </button>}
+        sign in with Google
+    </button>}
+    
         
     </div>
   )

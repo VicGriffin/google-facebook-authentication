@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { auth, provider } from './config';
+import { auth,facebookProvider, googleProvider } from './config.jsx';
 import { signInWithPopup } from 'firebase/auth';
 import Home from '../page/home/Home';
 import './signup.css'
@@ -8,14 +8,14 @@ function Signup() {
   const [value, setValue] = useState(null);
 
   const handleGoogleLogin = () => {
-    signInWithPopup(auth, provider).then((data) => {
+    signInWithPopup(auth, googleProvider).then((data) => {
       setValue(data.user.email);
       localStorage.setItem('email', data.user.email);
     });
   };
 
   const handleFacebookLogin = () => {
-    signInWithPopup(auth, provider).then((data) => {
+    signInWithPopup(auth, facebookProvider).then((data) => {
       setValue(data.user.email);
       localStorage.setItem('email', data.user.email);
     });
